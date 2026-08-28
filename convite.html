@@ -9,7 +9,6 @@
 <meta
 name="viewport"
 content="width=device-width, initial-scale=1.0"
-
 >
 
 <title>Convite - Reunião Noturna Campal</title>
@@ -140,31 +139,48 @@ content="width=device-width, initial-scale=1.0"
     }
 
 
-    .chave-pix {
+    /* ===============================
+       QR CODE PIX
+    =============================== */
+
+    .qrcode-pix {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: fit-content;
+
+        margin: 15px auto;
+
+        padding: 12px;
+
+        background: #ffffff;
+
+        border:
+            2px solid
+            #d4af37;
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 0 18px
+            rgba(212, 175, 55, 0.25);
+
+    }
+
+
+    .qrcode-pix img {
 
         display: block;
 
-        width: 100%;
+        width: 220px;
 
-        padding: 12px 8px;
+        height: 220px;
 
-        margin: 8px 0 12px;
-
-        background: #020813;
-
-        border: 1px solid #1e3d59;
-
-        border-radius: 5px;
-
-        color: #f3e5ab;
-
-        font-family: monospace;
-
-        font-size: 17px;
-
-        font-weight: bold;
-
-        letter-spacing: 0.5px;
+        object-fit: contain;
 
     }
 
@@ -187,7 +203,7 @@ content="width=device-width, initial-scale=1.0"
 
         padding: 12px;
 
-        margin-bottom: 8px;
+        margin: 10px auto 8px;
 
         border: 1px solid #d4af37;
 
@@ -374,18 +390,18 @@ content="width=device-width, initial-scale=1.0"
                 280px;
 
             margin:
-                0 auto 8px;
+                10px auto 8px;
 
         }
 
 
-        .chave-pix {
+        .qrcode-pix img {
 
             width:
-                350px;
+                250px;
 
-            margin:
-                8px auto 12px;
+            height:
+                250px;
 
         }
 
@@ -428,12 +444,23 @@ content="width=device-width, initial-scale=1.0"
 
         <br>
 
+        <span style="font-size: 14px; color: #f3e5ab;">
+
+            Escaneie o QR Code abaixo para realizar o pagamento via PIX.
+
+        </span>
+
     </div>
 
 
-    <div class="chave-pix">
+    <!-- QR CODE -->
 
-        19.558.956/0001-31
+    <div class="qrcode-pix">
+
+        <img
+            src="QRCODE.JPEG"
+            alt="QR Code para pagamento via PIX"
+        >
 
     </div>
 
@@ -446,7 +473,7 @@ content="width=device-width, initial-scale=1.0"
         onclick="copiarPix()"
     >
 
-        📋 COPIAR CHAVE PIX
+        📋 COPIAR PIX
 
     </button>
 
@@ -456,9 +483,6 @@ content="width=device-width, initial-scale=1.0"
         class="mensagem-pix"
         aria-live="polite"
     ></div>
-
-    </div>
-
 
 
     <!-- INSCRIÇÃO -->
@@ -489,8 +513,7 @@ content="width=device-width, initial-scale=1.0"
         <br>
         <br>
 
-        <strong>IR JOSÉ JULIO - (32) 98875-5765</strong>    
-        
+        <strong>IR JOSÉ JULIO - (32) 98875-5765</strong>
 
     </div>
 
@@ -498,6 +521,7 @@ content="width=device-width, initial-scale=1.0"
 </section>
 
 </main>
+
 
 <!-- ===============================
      JAVASCRIPT - COPIAR PIX
@@ -507,8 +531,8 @@ content="width=device-width, initial-scale=1.0"
 
 function copiarPix() {
 
-    const chave =
-        "19.558.956/0001-31";
+    const chavePix =
+        "00020101021126360014br.gov.bcb.pix011419558956000131520400005303986540550.005802BR5925LOJA MACONICA PORTAL DA M6009BARBACENA62070503***63047F3D";
 
     const mensagem =
         document.getElementById(
@@ -522,19 +546,19 @@ function copiarPix() {
     ) {
 
         navigator.clipboard
-            .writeText(chave)
+            .writeText(chavePix)
 
             .then(function () {
 
                 mensagem.textContent =
-                    "✅ Chave PIX copiada!";
+                    "✅ PIX Copia e Cola copiado!";
 
             })
 
             .catch(function () {
 
                 copiarAlternativo(
-                    chave,
+                    chavePix,
                     mensagem
                 );
 
@@ -545,7 +569,7 @@ function copiarPix() {
     else {
 
         copiarAlternativo(
-            chave,
+            chavePix,
             mensagem
         );
 
@@ -555,7 +579,7 @@ function copiarPix() {
 
 
 function copiarAlternativo(
-    chave,
+    chavePix,
     mensagem
 ) {
 
@@ -566,7 +590,7 @@ function copiarAlternativo(
 
 
     campo.value =
-        chave;
+        chavePix;
 
     campo.style.position =
         "fixed";
@@ -590,14 +614,14 @@ function copiarAlternativo(
         );
 
         mensagem.textContent =
-            "✅ Chave PIX copiada!";
+            "✅ PIX Copia e Cola copiado!";
 
     }
 
     catch (erro) {
 
         mensagem.textContent =
-            "⚠️ Copie a chave manualmente.";
+            "⚠️ Não foi possível copiar. Tente novamente.";
 
     }
 
