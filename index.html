@@ -7,12 +7,12 @@
 <meta charset="UTF-8">
 
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
 >
 
 <title>Convite - Reunião Noturna Campal</title>
-
 
 <style>
 
@@ -104,37 +104,143 @@
     }
 
 
-    .area-inscricao h2 {
+    /* ===============================
+       PIX
+    =============================== */
 
-        margin:
-            0 0 8px;
+    .pix-titulo {
+
+        color: #d4af37;
 
         font-family:
             Georgia,
             serif;
 
-        font-size:
-            20px;
+        font-size: 15px;
 
-        color:
-            #ffffff;
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 10px;
 
     }
 
 
-    .area-inscricao p {
+    .pix-info {
 
-        margin:
-            0 0 18px;
+        color: #cccccc;
 
-        color:
-            #cccccc;
+        font-size: 13px;
 
-        font-size:
-            13px;
+        line-height: 1.5;
 
-        line-height:
-            1.5;
+        margin-bottom: 10px;
+
+    }
+
+
+    .chave-pix {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 8px;
+
+        margin: 8px 0 12px;
+
+        background: #020813;
+
+        border: 1px solid #1e3d59;
+
+        border-radius: 5px;
+
+        color: #f3e5ab;
+
+        font-family: monospace;
+
+        font-size: 17px;
+
+        font-weight: bold;
+
+        letter-spacing: 0.5px;
+
+    }
+
+
+    /* ===============================
+       BOTÃO COPIAR PIX
+    =============================== */
+
+    .botao-pix {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 100%;
+
+        min-height: 52px;
+
+        padding: 12px;
+
+        margin-bottom: 8px;
+
+        border: 1px solid #d4af37;
+
+        border-radius: 6px;
+
+        background:
+            rgba(212, 175, 55, 0.12);
+
+        color: #f3e5ab;
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        letter-spacing: 0.7px;
+
+        cursor: pointer;
+
+    }
+
+
+    .botao-pix:active {
+
+        transform: scale(0.98);
+
+        background:
+            rgba(212, 175, 55, 0.25);
+
+    }
+
+
+    .mensagem-pix {
+
+        min-height: 20px;
+
+        margin-bottom: 12px;
+
+        color: #f3e5ab;
+
+        font-size: 12px;
+
+    }
+
+
+    .favorecido {
+
+        color: #cccccc;
+
+        font-size: 12px;
+
+        line-height: 1.5;
+
+        margin-bottom: 20px;
 
     }
 
@@ -208,25 +314,31 @@
 
 
     /* ===============================
-       VOLTAR
+       CONTATO
     =============================== */
 
-    .voltar {
+    .contato {
 
-        display:
-            inline-block;
+        margin-top: 22px;
 
-        margin:
-            16px 0 10px;
+        padding-top: 18px;
 
-        color:
-            #d4af37;
+        border-top:
+            1px solid
+            rgba(255,255,255,0.12);
 
-        text-decoration:
-            none;
+        color: #ffffff;
 
-        font-size:
-            13px;
+        font-size: 13px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .contato strong {
+
+        color: #d4af37;
 
     }
 
@@ -255,54 +367,261 @@
 
         }
 
+
+        .botao-pix {
+
+            width:
+                280px;
+
+            margin:
+                0 auto 8px;
+
+        }
+
+
+        .chave-pix {
+
+            width:
+                350px;
+
+            margin:
+                8px auto 12px;
+
+        }
+
     }
 
 </style>
-```
 
 </head>
 
 <body>
 
-```
 <main class="pagina">
 
+```
+<!-- IMAGEM DO CONVITE -->
 
-    <!-- IMAGEM DO CONVITE -->
+<img
+    src="Imagens/convite.jpg"
+    alt="Convite da Reunião Noturna Campal"
+    class="imagem-convite"
+>
 
-    <img
-        src="Imagens/convite.jpg"
-        alt="Convite da Reunião Noturna Campal"
-        class="imagem-convite"
+
+<!-- PAGAMENTO E INSCRIÇÃO -->
+
+<section class="area-inscricao">
+
+
+    <!-- PIX -->
+
+    <div class="pix-titulo">
+
+        PAGAMENTO DA INSCRIÇÃO
+
+    </div>
+
+
+    <div class="pix-info">
+
+        Taxa de inscrição: <strong>R$ 50,00</strong>
+
+        <br>
+
+        Chave PIX — CNPJ:
+
+    </div>
+
+
+    <div class="chave-pix">
+
+        19.558.956/0001-31
+
+    </div>
+
+
+    <!-- BOTÃO COPIAR -->
+
+    <button
+        type="button"
+        class="botao-pix"
+        onclick="copiarPix()"
     >
+
+        📋 COPIAR CHAVE PIX
+
+    </button>
+
+
+    <div
+        id="mensagemPix"
+        class="mensagem-pix"
+        aria-live="polite"
+    ></div>
+
+
+    <div class="favorecido">
+
+        Loja Portal da Mantiqueira
+        • Banco Sicoob
+
+    </div>
+
 
 
     <!-- INSCRIÇÃO -->
 
-    <section class="area-inscricao">
+    <a
+        href="https://forms.gle/2SQPeh3or9odEqGs8"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="botao-inscricao"
+    >
 
-          <a
-            href="https://forms.gle/2SQPeh3or9odEqGs8"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="botao-inscricao"
-        >
+        ✦ FAZER MINHA INSCRIÇÃO ✦
 
-            ✦ FAZER MINHA INSCRIÇÃO ✦
-
-        </a>
-<br>
-APÓS O PAGAMENTO ENVIAR O COMPROVANTE PARA
-
-<br>
-<br>
-
- IR JOSÉ JULIO (32) 98875-5765
-
-    </section>
+    </a>
 
 
- 
+    <!-- COMPROVANTE -->
+
+    <div class="contato">
+
+        <strong>
+
+            APÓS O PAGAMENTO,
+            ENVIAR O COMPROVANTE PARA
+
+        </strong>
+
+        <br>
+        <br>
+
+        IR JOSÉ JULIO
+
+        <br>
+
+        (32) 98875-5765
+
+    </div>
+
+
+</section>
+```
+
+</main>
+
+<!-- ===============================
+     JAVASCRIPT - COPIAR PIX
+================================ -->
+
+<script>
+
+function copiarPix() {
+
+    const chave =
+        "19.558.956/0001-31";
+
+    const mensagem =
+        document.getElementById(
+            "mensagemPix"
+        );
+
+
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
+
+        navigator.clipboard
+            .writeText(chave)
+
+            .then(function () {
+
+                mensagem.textContent =
+                    "✅ Chave PIX copiada!";
+
+            })
+
+            .catch(function () {
+
+                copiarAlternativo(
+                    chave,
+                    mensagem
+                );
+
+            });
+
+    }
+
+    else {
+
+        copiarAlternativo(
+            chave,
+            mensagem
+        );
+
+    }
+
+}
+
+
+function copiarAlternativo(
+    chave,
+    mensagem
+) {
+
+    const campo =
+        document.createElement(
+            "textarea"
+        );
+
+
+    campo.value =
+        chave;
+
+    campo.style.position =
+        "fixed";
+
+    campo.style.opacity =
+        "0";
+
+    document.body.appendChild(
+        campo
+    );
+
+    campo.focus();
+
+    campo.select();
+
+
+    try {
+
+        document.execCommand(
+            "copy"
+        );
+
+        mensagem.textContent =
+            "✅ Chave PIX copiada!";
+
+    }
+
+    catch (erro) {
+
+        mensagem.textContent =
+            "⚠️ Copie a chave manualmente.";
+
+    }
+
+
+    document.body.removeChild(
+        campo
+    );
+
+}
+
+</script>
 
 </body>
 
