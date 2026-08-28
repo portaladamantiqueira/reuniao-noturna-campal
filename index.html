@@ -1,1872 +1,309 @@
-```html
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <meta
-        name="description"
-        content="Reunião Noturna Campal | Loja Portal da Mantiqueira | Oriente de Barbacena - MG"
-    >
-
-    <title>
-        Reunião Noturna Campal | Loja Portal da Mantiqueira
-    </title>
+<title>Convite - Reunião Noturna Campal</title>
 
 
-    <style>
+<style>
 
-        /* =====================================================
-           CONFIGURAÇÕES GERAIS - MOBILE FIRST
-        ===================================================== */
-
-        :root {
-
-            --bg-gradient:
-                linear-gradient(
-                    135deg,
-                    #020813 0%,
-                    #0d1b2a 50%,
-                    #020813 100%
-                );
-
-            --gold-light: #f3e5ab;
-
-            --gold-main: #d4af37;
-
-            --gold-dark: #aa841b;
-
-            --card-bg:
-                rgba(13, 27, 42, 0.94);
-
-            --border-color:
-                #1e3d59;
-
-            --text-main:
-                #ffffff;
-
-            --text-secondary:
-                #cccccc;
-
-        }
+    * {
+        box-sizing: border-box;
+    }
 
 
-        * {
+    html,
+    body {
 
-            box-sizing:
-                border-box;
+        margin: 0;
+        padding: 0;
 
-            margin:
-                0;
+        width: 100%;
+        min-height: 100%;
 
-            padding:
-                0;
-
-        }
+    }
 
 
-        html {
+    body {
 
-            width:
-                100%;
+        background: #020813;
 
-            overflow-x:
-                hidden;
+        color: #ffffff;
 
-            scroll-behavior:
-                smooth;
+        font-family: Arial, sans-serif;
 
-        }
+        text-align: center;
 
+        padding: 10px;
+
+    }
+
+
+    .pagina {
+
+        width: 100%;
+
+        max-width: 850px;
+
+        margin: 0 auto;
+
+    }
+
+
+    /* ===============================
+       IMAGEM DO CONVITE
+    =============================== */
+
+    .imagem-convite {
+
+        display: block;
+
+        width: 100%;
+
+        height: auto;
+
+        margin: 0 auto;
+
+        border: 1px solid #d4af37;
+
+        box-shadow:
+            0 0 25px
+            rgba(212, 175, 55, 0.18);
+
+    }
+
+
+    /* ===============================
+       ÁREA DE INSCRIÇÃO
+    =============================== */
+
+    .area-inscricao {
+
+        margin: 20px 0 10px;
+
+        padding: 20px 15px;
+
+        border:
+            1px solid
+            rgba(212, 175, 55, 0.35);
+
+        border-radius: 8px;
+
+        background:
+            rgba(13, 27, 42, 0.95);
+
+    }
+
+
+    .area-inscricao h2 {
+
+        margin:
+            0 0 8px;
+
+        font-family:
+            Georgia,
+            serif;
+
+        font-size:
+            20px;
+
+        color:
+            #ffffff;
+
+    }
+
+
+    .area-inscricao p {
+
+        margin:
+            0 0 18px;
+
+        color:
+            #cccccc;
+
+        font-size:
+            13px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    /* ===============================
+       BOTÃO GOOGLE FORMS
+    =============================== */
+
+    .botao-inscricao {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        width:
+            100%;
+
+        min-height:
+            58px;
+
+        padding:
+            14px;
+
+        border:
+            2px solid
+            #ffffff;
+
+        border-radius:
+            6px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                #f3e5ab,
+                #d4af37
+            );
+
+        color:
+            #020813;
+
+        text-decoration:
+            none;
+
+        font-size:
+            15px;
+
+        font-weight:
+            bold;
+
+        letter-spacing:
+            0.8px;
+
+        box-shadow:
+            0 4px 20px
+            rgba(212, 175, 55, 0.4);
+
+    }
+
+
+    .botao-inscricao:active {
+
+        transform:
+            scale(0.98);
+
+    }
+
+
+    /* ===============================
+       VOLTAR
+    =============================== */
+
+    .voltar {
+
+        display:
+            inline-block;
+
+        margin:
+            16px 0 10px;
+
+        color:
+            #d4af37;
+
+        text-decoration:
+            none;
+
+        font-size:
+            13px;
+
+    }
+
+
+    /* ===============================
+       DESKTOP
+    =============================== */
+
+    @media (min-width: 600px) {
 
         body {
 
-            width:
-                100%;
-
-            min-height:
-                100vh;
-
-            overflow-x:
-                hidden;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            background:
-                var(--bg-gradient);
-
-            color:
-                var(--text-main);
-
             padding:
-                12px;
-
-            -webkit-font-smoothing:
-                antialiased;
+                20px;
 
         }
 
 
-        /* =====================================================
-           CONTAINER PRINCIPAL
-        ===================================================== */
-
-        .convite-container {
+        .botao-inscricao {
 
             width:
-                100%;
-
-            max-width:
-                720px;
+                350px;
 
             margin:
                 0 auto;
 
-            background:
-                var(--card-bg);
-
-            border:
-                2px solid
-                var(--gold-main);
-
-            border-radius:
-                10px;
-
-            padding:
-                25px 17px 30px;
-
-            box-shadow:
-                0 0 30px
-                rgba(212, 175, 55, 0.15);
-
         }
 
+    }
 
-        /* =====================================================
-           CABEÇALHO
-        ===================================================== */
-
-        .topo-header {
-
-            text-align:
-                center;
-
-            margin-bottom:
-                25px;
-
-        }
-
-
-        .simbolo {
-
-            font-size:
-                38px;
-
-            color:
-                var(--gold-main);
-
-            margin-bottom:
-                10px;
-
-            line-height:
-                1;
-
-        }
-
-
-        .topo-header h1 {
-
-            font-size:
-                17px;
-
-            line-height:
-                1.4;
-
-            letter-spacing:
-                1.5px;
-
-            color:
-                #ffffff;
-
-            margin:
-                5px 0;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .topo-header h2 {
-
-            font-size:
-                11px;
-
-            line-height:
-                1.5;
-
-            letter-spacing:
-                2.5px;
-
-            color:
-                var(--gold-main);
-
-            margin:
-                0 0 18px;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .titulo-principal {
-
-            font-size:
-                34px;
-
-            line-height:
-                1.05;
-
-            color:
-                #ffffff;
-
-            margin:
-                10px 0 3px;
-
-            font-weight:
-                bold;
-
-            letter-spacing:
-                2px;
-
-            text-shadow:
-                2px 2px 4px
-                rgba(0, 0, 0, 0.8);
-
-        }
-
-
-        .sub-titulo {
-
-            font-size:
-                21px;
-
-            line-height:
-                1.2;
-
-            color:
-                var(--gold-main);
-
-            letter-spacing:
-                2px;
-
-            margin:
-                5px 0;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .grau-box {
-
-            display:
-                inline-block;
-
-            border:
-                1px solid
-                var(--gold-main);
-
-            padding:
-                6px 22px;
-
-            font-size:
-                16px;
-
-            letter-spacing:
-                3px;
-
-            color:
-                var(--gold-light);
-
-            margin:
-                14px 0 0;
-
-            background:
-                rgba(212, 175, 55, 0.1);
-
-        }
-
-
-        /* =====================================================
-           INFORMAÇÕES
-        ===================================================== */
-
-        .grid-info {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                1fr;
-
-            gap:
-                0;
-
-        }
-
-
-        .secao-titulo {
-
-            color:
-                var(--gold-main);
-
-            text-transform:
-                uppercase;
-
-            font-size:
-                15px;
-
-            line-height:
-                1.3;
-
-            letter-spacing:
-                1px;
-
-            border-bottom:
-                1px solid
-                var(--border-color);
-
-            padding-bottom:
-                8px;
-
-            margin-top:
-                20px;
-
-            margin-bottom:
-                16px;
-
-        }
-
-
-        .item-detalhe {
-
-            margin-bottom:
-                17px;
-
-            font-size:
-                14px;
-
-            line-height:
-                1.6;
-
-            color:
-                #ffffff;
-
-        }
-
-
-        .item-detalhe strong {
-
-            color:
-                var(--gold-main);
-
-            display:
-                block;
-
-            text-transform:
-                uppercase;
-
-            font-size:
-                11px;
-
-            letter-spacing:
-                1px;
-
-            margin-bottom:
-                3px;
-
-        }
-
-
-        .item-detalhe span {
-
-            color:
-                #cccccc;
-
-        }
-
-
-        .taxa-destaque {
-
-            font-size:
-                29px;
-
-            line-height:
-                1.2;
-
-            color:
-                var(--gold-light);
-
-            font-weight:
-                bold;
-
-            margin-top:
-                5px;
-
-        }
-
-
-        /* =====================================================
-           ÁREA DO CONVITE
-        ===================================================== */
-
-        .area-convite {
-
-            text-align:
-                center;
-
-            margin:
-                25px 0;
-
-            padding:
-                20px 15px;
-
-            background:
-                rgba(255, 255, 255, 0.025);
-
-            border:
-                1px solid
-                rgba(212, 175, 55, 0.25);
-
-            border-radius:
-                8px;
-
-        }
-
-
-        .area-convite h3 {
-
-            color:
-                #ffffff;
-
-            font-size:
-                19px;
-
-            line-height:
-                1.35;
-
-            margin:
-                0 0 8px;
-
-        }
-
-
-        .area-convite p {
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                13px;
-
-            line-height:
-                1.6;
-
-            color:
-                #cccccc;
-
-            margin:
-                0 0 18px;
-
-        }
-
-
-        .btn-convite {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            width:
-                100%;
-
-            min-height:
-                54px;
-
-            padding:
-                14px 15px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #f3e5ab,
-                    #d4af37
-                );
-
-            color:
-                #020813 !important;
-
-            text-decoration:
-                none !important;
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                14px;
-
-            font-weight:
-                bold;
-
-            letter-spacing:
-                0.7px;
-
-            border-radius:
-                6px;
-
-            border:
-                2px solid
-                #ffffff;
-
-            box-shadow:
-                0 4px 18px
-                rgba(212, 175, 55, 0.3);
-
-            transition:
-                all 0.2s ease;
-
-        }
-
-
-        .btn-convite:active {
-
-            transform:
-                scale(0.98);
-
-        }
-
-
-        /* =====================================================
-           PAGAMENTO PIX
-        ===================================================== */
-
-        .bloco-pagamento {
-
-            border:
-                1px dashed
-                var(--gold-main);
-
-            background:
-                rgba(212, 175, 55, 0.04);
-
-            padding:
-                20px 14px;
-
-            border-radius:
-                6px;
-
-            margin:
-                25px 0;
-
-            text-align:
-                center;
-
-        }
-
-
-        .bloco-pagamento h4 {
-
-            margin:
-                0 0 12px;
-
-            color:
-                var(--gold-main);
-
-            font-size:
-                13px;
-
-            line-height:
-                1.5;
-
-            letter-spacing:
-                1px;
-
-        }
-
-
-        .chave-label {
-
-            font-size:
-                11px;
-
-            color:
-                #aaaaaa;
-
-            margin-bottom:
-                6px;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .chave-pix {
-
-            font-family:
-                monospace;
-
-            background:
-                #020813;
-
-            padding:
-                12px 10px;
-
-            display:
-                block;
-
-            width:
-                100%;
-
-            border-radius:
-                4px;
-
-            border:
-                1px solid
-                var(--border-color);
-
-            margin:
-                5px 0 12px;
-
-            font-size:
-                16px;
-
-            line-height:
-                1.4;
-
-            color:
-                var(--gold-light);
-
-            word-break:
-                break-all;
-
-        }
-
-
-        /* =====================================================
-           BOTÃO COPIAR PIX
-        ===================================================== */
-
-        .btn-copiar-pix {
-
-            width:
-                100%;
-
-            min-height:
-                48px;
-
-            border:
-                1px solid
-                var(--gold-main);
-
-            border-radius:
-                5px;
-
-            background:
-                rgba(212, 175, 55, 0.12);
-
-            color:
-                var(--gold-light);
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                13px;
-
-            font-weight:
-                bold;
-
-            letter-spacing:
-                0.8px;
-
-            cursor:
-                pointer;
-
-            transition:
-                all 0.2s ease;
-
-        }
-
-
-        .btn-copiar-pix:active {
-
-            transform:
-                scale(0.98);
-
-            background:
-                rgba(212, 175, 55, 0.25);
-
-        }
-
-
-        .mensagem-pix {
-
-            min-height:
-                20px;
-
-            margin-top:
-                8px;
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                12px;
-
-            color:
-                var(--gold-light);
-
-        }
-
-
-        .favorecido {
-
-            font-size:
-                12px;
-
-            line-height:
-                1.6;
-
-            color:
-                var(--gold-light);
-
-            margin-top:
-                9px;
-
-        }
-
-
-        .contato-telefone {
-
-            font-size:
-                14px;
-
-            line-height:
-                1.6;
-
-            margin-top:
-                17px;
-
-            color:
-                #ffffff;
-
-            border-top:
-                1px solid
-                rgba(255, 255, 255, 0.1);
-
-            padding-top:
-                15px;
-
-        }
-
-
-        .contato-telefone strong {
-
-            color:
-                var(--gold-main);
-
-        }
-
-
-        /* =====================================================
-           ÁREA DE INSCRIÇÃO
-        ===================================================== */
-
-        .area-botao-cadastro {
-
-            text-align:
-                center;
-
-            margin:
-                28px 0;
-
-            padding:
-                22px 15px;
-
-            background:
-                rgba(255, 255, 255, 0.025);
-
-            border-radius:
-                8px;
-
-            border:
-                1px solid
-                rgba(212, 175, 55, 0.25);
-
-        }
-
-
-        .area-botao-cadastro h3 {
-
-            color:
-                #ffffff;
-
-            font-size:
-                19px;
-
-            line-height:
-                1.35;
-
-            margin:
-                0 0 10px;
-
-        }
-
-
-        .area-botao-cadastro p {
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                13px;
-
-            line-height:
-                1.6;
-
-            color:
-                #cccccc;
-
-            margin-bottom:
-                20px;
-
-        }
-
-
-        .btn-link-formulario {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            width:
-                100%;
-
-            min-height:
-                58px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #f3e5ab,
-                    #d4af37
-                );
-
-            color:
-                #020813 !important;
-
-            text-decoration:
-                none !important;
-
-            padding:
-                14px 15px;
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-weight:
-                bold;
-
-            font-size:
-                15px;
-
-            line-height:
-                1.3;
-
-            text-transform:
-                uppercase;
-
-            letter-spacing:
-                0.8px;
-
-            border-radius:
-                6px;
-
-            box-shadow:
-                0 4px 20px
-                rgba(212, 175, 55, 0.4);
-
-            transition:
-                all 0.2s ease;
-
-            border:
-                2px solid
-                #ffffff;
-
-        }
-
-
-        .btn-link-formulario:active {
-
-            transform:
-                scale(0.98);
-
-        }
-
-
-        .btn-hint {
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                11px;
-
-            line-height:
-                1.5;
-
-            color:
-                #aaaaaa;
-
-            margin-top:
-                11px;
-
-            display:
-                block;
-
-        }
-
-
-        /* =====================================================
-           LGPD
-        ===================================================== */
-
-        .privacy-box {
-
-            background-color:
-                rgba(0, 0, 0, 0.3);
-
-            border:
-                1px solid
-                var(--border-color);
-
-            padding:
-                15px;
-
-            border-radius:
-                6px;
-
-            font-family:
-                Arial,
-                sans-serif;
-
-            font-size:
-                11px;
-
-            color:
-                #cccccc;
-
-            line-height:
-                1.65;
-
-            margin-top:
-                25px;
-
-        }
-
-
-        .privacy-box strong {
-
-            display:
-                block;
-
-            margin-bottom:
-                7px;
-
-            color:
-                var(--gold-main);
-
-            font-family:
-                Georgia,
-                serif;
-
-            font-size:
-                14px;
-
-        }
-
-
-        /* =====================================================
-           RODAPÉ
-        ===================================================== */
-
-        .lema-masonic {
-
-            text-align:
-                center;
-
-            font-size:
-                11px;
-
-            line-height:
-                1.8;
-
-            color:
-                var(--gold-main);
-
-            letter-spacing:
-                1.5px;
-
-            margin-top:
-                30px;
-
-            text-transform:
-                uppercase;
-
-            border-top:
-                1px solid
-                var(--border-color);
-
-            padding-top:
-                18px;
-
-        }
-
-
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
-        @media (min-width: 600px) {
-
-            body {
-
-                padding:
-                    25px;
-
-            }
-
-
-            .convite-container {
-
-                padding:
-                    35px 30px 40px;
-
-            }
-
-
-            .topo-header h1 {
-
-                font-size:
-                    20px;
-
-            }
-
-
-            .topo-header h2 {
-
-                font-size:
-                    13px;
-
-            }
-
-
-            .titulo-principal {
-
-                font-size:
-                    42px;
-
-            }
-
-
-            .sub-titulo {
-
-                font-size:
-                    22px;
-
-            }
-
-
-            .grid-info {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-                gap:
-                    25px;
-
-            }
-
-
-            .secao-titulo {
-
-                margin-top:
-                    25px;
-
-            }
-
-
-            .btn-convite {
-
-                width:
-                    auto;
-
-                min-width:
-                    300px;
-
-                margin:
-                    0 auto;
-
-            }
-
-
-            .btn-copiar-pix {
-
-                width:
-                    auto;
-
-                min-width:
-                    230px;
-
-                padding:
-                    0 25px;
-
-            }
-
-
-            .btn-link-formulario {
-
-                width:
-                    auto;
-
-                min-width:
-                    330px;
-
-                margin:
-                    0 auto;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           DESKTOP
-        ===================================================== */
-
-        @media (min-width: 900px) {
-
-            body {
-
-                padding:
-                    35px 20px;
-
-            }
-
-
-            .convite-container {
-
-                padding:
-                    45px 40px;
-
-            }
-
-
-            .titulo-principal {
-
-                font-size:
-                    46px;
-
-            }
-
-
-            .sub-titulo {
-
-                font-size:
-                    24px;
-
-            }
-
-
-            .area-botao-cadastro {
-
-                padding:
-                    30px;
-
-            }
-
-
-            .btn-convite:hover {
-
-                transform:
-                    scale(1.04);
-
-                box-shadow:
-                    0 6px 25px
-                    rgba(212, 175, 55, 0.5);
-
-            }
-
-
-            .btn-copiar-pix:hover {
-
-                background:
-                    rgba(212, 175, 55, 0.22);
-
-            }
-
-
-            .btn-link-formulario:hover {
-
-                transform:
-                    scale(1.04);
-
-                box-shadow:
-                    0 6px 25px
-                    rgba(212, 175, 55, 0.6);
-
-            }
-
-        }
-
-    </style>
+</style>
+```
 
 </head>
 
-
 <body>
 
+```
+<main class="pagina">
 
-<div class="convite-container">
 
+    <!-- IMAGEM DO CONVITE -->
 
-    <!-- =================================================
-         CABEÇALHO
-    ================================================== -->
+    <img
+        src="Imagens/convite.jpg"
+        alt="Convite da Reunião Noturna Campal"
+        class="imagem-convite"
+    >
 
-    <header class="topo-header">
 
+    <!-- INSCRIÇÃO -->
 
-        <div class="simbolo">
+    <section class="area-inscricao">
 
-            ∴
-
-        </div>
-
-
-        <h1>
-
-            Loja Portal da Mantiqueira
-
-        </h1>
-
-
-        <h2>
-
-            Oriente de Barbacena - MG
-
-        </h2>
-
-
-        <div class="titulo-principal">
-
-            REUNIÃO
-
-        </div>
-
-
-        <div class="sub-titulo">
-
-            Noturna Campal
-
-        </div>
-
-
-        <div class="grau-box">
-
-            GRAU I
-
-        </div>
-
-
-    </header>
-
-
-
-    <!-- =================================================
-         INFORMAÇÕES DO EVENTO
-    ================================================== -->
-
-    <div class="grid-info">
-
-
-        <!-- LOGÍSTICA -->
-
-        <section>
-
-
-            <div class="secao-titulo">
-
-                Logística
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Data:
-
-                </strong>
-
-                02.10.2026 (Sexta-feira)
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Horário:
-
-                </strong>
-
-                19h30
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Local:
-
-                </strong>
-
-                Park Hotel Mantiqueira
-
-                <br>
-
-                <span>
-
-                    Rodovia BR 040 km 708
-                    (sentido BH/RJ)
-
-                    <br>
-
-                    Bairro Pombal
-
-                    <br>
-
-                    Barbacena – MG
-
-                </span>
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Ponto de Referência:
-
-                </strong>
-
-                <span>
-
-                    Próximo à sede campestre
-                    do Olimpic Clube.
-
-                </span>
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- INSCRIÇÃO E VALORES -->
-
-        <section>
-
-
-            <div class="secao-titulo">
-
-                Inscrição e Valores
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Taxa de Inscrição:
-
-                </strong>
-
-
-                <div class="taxa-destaque">
-
-                    R$ 50,00
-
-                </div>
-
-            </div>
-
-
-            <div class="item-detalhe">
-
-                <strong>
-
-                    Incluso na Inscrição:
-
-                </strong>
-
-                ✓ Café na chegada
-
-                <br>
-
-                ✓ Ágape após a reunião
-
-            </div>
-
-
-            <div
-                class="item-detalhe"
-                style="color: #f3a9a9;"
-            >
-
-                <strong>
-
-                    Observação importante:
-
-                </strong>
-
-                Bebidas à parte.
-
-            </div>
-
-
-        </section>
-
-
-    </div>
-
-
-
-    <!-- =================================================
-         CONVITE OFICIAL
-    ================================================== -->
-
-    <section class="area-convite">
-
-
-        <h3>
-
-            Convite Oficial
-
-        </h3>
-
-
-        <p>
-
-            Consulte o convite completo da
-            Reunião Noturna Campal.
-
-        </p>
-
-
-        <a
-            href="Imagens/convite.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-convite"
-        >
-
-            📜 VISUALIZAR CONVITE COMPLETO
-
-        </a>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         PAGAMENTO PIX
-    ================================================== -->
-
-    <section class="bloco-pagamento">
-
-
-        <h4>
-
-            CHAVE PIX PARA PAGAMENTO
-            DA TAXA DE INSCRIÇÃO
-
-        </h4>
-
-
-        <div class="chave-label">
-
-            CNPJ
-
-        </div>
-
-
-        <div
-            class="chave-pix"
-            id="chavePix"
-        >
-
-            19.558.956/0001-31
-
-        </div>
-
-
-        <button
-            type="button"
-            class="btn-copiar-pix"
-            onclick="copiarPix()"
-        >
-
-            📋 COPIAR CHAVE PIX
-
-        </button>
-
-
-        <div
-            id="mensagemPix"
-            class="mensagem-pix"
-            aria-live="polite"
-        ></div>
-
-
-        <div class="favorecido">
-
-            <strong>
-
-                Loja Portal da Mantiqueira
-
-            </strong>
-
-            <br>
-
-            Banco Sicoob
-
-        </div>
-
-
-        <div class="contato-telefone">
-
-            <strong>
-
-                Dúvidas ou confirmações:
-
-            </strong>
-
-            <br>
-
-            Entre em contato com
-            o responsável pela organização.
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         INSCRIÇÃO
-    ================================================== -->
-
-    <section class="area-botao-cadastro">
-
-
-        <h3>
-
-            Confirme sua participação
-
-        </h3>
-
-
-        <p>
-
-            Após realizar o pagamento via PIX,
-            clique abaixo para preencher sua inscrição.
-
-        </p>
-
-
-        <a
-            class="btn-link-formulario"
+          <a
             href="https://forms.gle/2SQPeh3or9odEqGs8"
             target="_blank"
             rel="noopener noreferrer"
+            class="botao-inscricao"
         >
 
             ✦ FAZER MINHA INSCRIÇÃO ✦
 
         </a>
+<br>
+APÓS O PAGAMENTO ENVIAR O COMPROVANTE PARA
 
+<br>
+<br>
 
-        <span class="btn-hint">
-
-            O formulário será aberto em uma nova aba.
-
-        </span>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         PRIVACIDADE / LGPD
-    ================================================== -->
-
-    <section class="privacy-box">
-
-
-        <strong>
-
-            🔐 Privacidade e tratamento dos dados
-
-        </strong>
-
-
-        Os dados pessoais fornecidos no formulário,
-        incluindo CPF, telefone e e-mail, serão
-        utilizados exclusivamente para finalidades
-        relacionadas à inscrição, organização,
-        identificação e comunicação referentes à
-        Reunião Noturna Campal, observando a legislação
-        aplicável, especialmente a Lei nº 13.709/2018
-        (Lei Geral de Proteção de Dados — LGPD).
+ IR JOSÉ JULIO (32) 98875-5765
 
     </section>
 
 
-
-    <!-- =================================================
-         RODAPÉ
-    ================================================== -->
-
-    <footer class="lema-masonic">
-
-
-        <div>
-
-            LOJA PORTAL DA MANTIQUEIRA
-
-        </div>
-
-
-        <div>
-
-            ORIENTE DE BARBACENA - MG
-
-        </div>
-
-
-        <div>
-
-            REUNIÃO NOTURNA CAMPAL • GRAU I
-
-        </div>
-
-
-        <div>
-
-            02.10.2026 • 19H30
-
-        </div>
-
-
-    </footer>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT - COPIAR CHAVE PIX
-====================================================== -->
-
-<script>
-
-function copiarPix() {
-
-    const chave =
-        "19.558.956/0001-31";
-
-    const mensagem =
-        document.getElementById(
-            "mensagemPix"
-        );
-
-
-    /*
-       Utiliza a API moderna de
-       área de transferência quando
-       disponível.
-    */
-
-    if (
-        navigator.clipboard &&
-        window.isSecureContext
-    ) {
-
-        navigator.clipboard
-            .writeText(chave)
-
-            .then(function () {
-
-                mensagem.textContent =
-                    "✅ Chave PIX copiada!";
-
-                setTimeout(function () {
-
-                    mensagem.textContent =
-                        "";
-
-                }, 3000);
-
-            })
-
-            .catch(function () {
-
-                copiarPixAlternativo(
-                    chave,
-                    mensagem
-                );
-
-            });
-
-    }
-
-    else {
-
-        copiarPixAlternativo(
-            chave,
-            mensagem
-        );
-
-    }
-
-}
-
-
-/*
-   Método alternativo para navegadores
-   que não oferecem Clipboard API.
-*/
-
-function copiarPixAlternativo(
-    chave,
-    mensagem
-) {
-
-    const campo =
-        document.createElement(
-            "textarea"
-        );
-
-
-    campo.value =
-        chave;
-
-    campo.style.position =
-        "fixed";
-
-    campo.style.opacity =
-        "0";
-
-    document.body.appendChild(
-        campo
-    );
-
-    campo.focus();
-
-    campo.select();
-
-
-    try {
-
-        document.execCommand(
-            "copy"
-        );
-
-        mensagem.textContent =
-            "✅ Chave PIX copiada!";
-
-    }
-
-    catch (erro) {
-
-        mensagem.textContent =
-            "⚠️ Copie a chave manualmente.";
-
-    }
-
-
-    document.body.removeChild(
-        campo
-    );
-
-
-    setTimeout(function () {
-
-        mensagem.textContent =
-            "";
-
-    }, 3000);
-
-}
-
-</script>
-
+ 
 
 </body>
 
 </html>
-```
