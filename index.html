@@ -1,0 +1,1132 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Reunião Noturna Campal - Loja Portal da Mantiqueira - Oriente de Barbacena - MG"
+    >
+
+    <title>
+        Reunião Noturna Campal | Loja Portal da Mantiqueira
+    </title>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            width: 100%;
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #262626 0%,
+                    #101010 48%,
+                    #050505 100%
+                );
+
+            color: #f5f0e6;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        /* =====================================================
+           CONTAINER PRINCIPAL
+        ===================================================== */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding:
+                10px
+                12px
+                35px;
+        }
+
+
+        /* =====================================================
+           CABEÇALHO
+        ===================================================== */
+
+        header {
+
+            text-align: center;
+
+            padding:
+                20px
+                5px
+                24px;
+
+            border-bottom:
+                1px solid
+                rgba(212, 175, 55, 0.45);
+        }
+
+
+        /* =====================================================
+           ÁREA DO BRASÃO
+           
+           Posteriormente podemos substituir este bloco
+           pela imagem oficial do brasão.
+        ===================================================== */
+
+        .logo-area {
+
+            width: 100px;
+
+            height: 100px;
+
+            margin:
+                0 auto
+                18px;
+
+            border:
+                2px solid
+                #d4af37;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #d4af37;
+
+            background:
+                rgba(0, 0, 0, 0.45);
+
+            box-shadow:
+
+                0 0 20px
+                rgba(212, 175, 55, 0.16),
+
+                inset 0 0 18px
+                rgba(212, 175, 55, 0.08);
+        }
+
+
+        .logo-placeholder {
+
+            font-size: 10px;
+
+            line-height: 1.4;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           IDENTIFICAÇÃO DA LOJA
+        ===================================================== */
+
+        .lodge-name {
+
+            color: #d4af37;
+
+            font-size: 17px;
+
+            line-height: 1.3;
+
+            letter-spacing: 1.4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 6px;
+        }
+
+
+        .lodge-orient {
+
+            color: #bdb6a7;
+
+            font-size: 12px;
+
+            line-height: 1.4;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================================
+           EVENTO
+        ===================================================== */
+
+        .event-title {
+
+            color: #d4af37;
+
+            font-size: 29px;
+
+            line-height: 1.15;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            font-weight: normal;
+        }
+
+
+        .degree {
+
+            color: #eee7d8;
+
+            font-size: 15px;
+
+            line-height: 1.3;
+
+            letter-spacing: 4px;
+
+            margin-top: 10px;
+
+            text-transform: uppercase;
+        }
+
+
+        .ornament {
+
+            color: #d4af37;
+
+            font-size: 18px;
+
+            margin-top: 15px;
+
+            letter-spacing: 6px;
+        }
+
+
+        /* =====================================================
+           CARD DE INFORMAÇÕES
+        ===================================================== */
+
+        .event-card {
+
+            width: 100%;
+
+            margin:
+                24px auto;
+
+            padding:
+                20px
+                15px;
+
+            border:
+                1px solid
+                rgba(212, 175, 55, 0.45);
+
+            background:
+                rgba(17, 17, 17, 0.94);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.35);
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            color: #d4af37;
+
+            font-size: 19px;
+
+            line-height: 1.3;
+
+            font-weight: normal;
+
+            letter-spacing: 1.4px;
+
+            margin-bottom: 18px;
+
+            text-transform: uppercase;
+        }
+
+
+        .event-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            width: 100%;
+        }
+
+
+        .info-item {
+
+            width: 100%;
+
+            text-align: center;
+
+            padding:
+                14px
+                5px;
+
+            border-bottom:
+                1px solid
+                rgba(212, 175, 55, 0.18);
+        }
+
+
+        .info-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .info-label {
+
+            display: block;
+
+            color: #d4af37;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+        }
+
+
+        .info-value {
+
+            display: block;
+
+            color: #f2eee5;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           CHAMADA PARA INSCRIÇÃO
+        ===================================================== */
+
+        .registration-card {
+
+            width: 100%;
+
+            margin:
+                25px auto;
+
+            padding:
+                28px
+                17px;
+
+            text-align: center;
+
+            border:
+                1px solid
+                rgba(212, 175, 55, 0.55);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(212, 175, 55, 0.08),
+                    rgba(0, 0, 0, 0.45)
+                );
+
+            box-shadow:
+                0 8px 30px
+                rgba(0, 0, 0, 0.4);
+        }
+
+
+        .registration-title {
+
+            color: #d4af37;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .registration-text {
+
+            color: #c9c3b7;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.65;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =====================================================
+           BOTÃO GOOGLE FORMS
+        ===================================================== */
+
+        .registration-button {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 100%;
+
+            min-height: 58px;
+
+            padding:
+                15px
+                18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b89018,
+                    #d4af37,
+                    #b89018
+                );
+
+            color: #101010;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            letter-spacing: 1.3px;
+
+            text-transform: uppercase;
+
+            box-shadow:
+                0 6px 20px
+                rgba(212, 175, 55, 0.22);
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+
+        .registration-button:active {
+
+            transform:
+                scale(0.98);
+        }
+
+
+        .button-subtitle {
+
+            display: block;
+
+            margin-top: 10px;
+
+            color: #8e887c;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =====================================================
+           INFORMAÇÃO SOBRE OS DADOS
+        ===================================================== */
+
+        .privacy-note {
+
+            width: 100%;
+
+            margin:
+                25px auto
+                0;
+
+            padding:
+                18px
+                15px;
+
+            border:
+                1px solid
+                rgba(212, 175, 55, 0.23);
+
+            background:
+                rgba(212, 175, 55, 0.035);
+        }
+
+
+        .privacy-note-title {
+
+            color: #d4af37;
+
+            font-size: 15px;
+
+            line-height: 1.4;
+
+            margin-bottom: 9px;
+        }
+
+
+        .privacy-note p {
+
+            color: #999;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           RODAPÉ
+        ===================================================== */
+
+        footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            padding-top: 22px;
+
+            border-top:
+                1px solid
+                rgba(212, 175, 55, 0.25);
+
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        footer strong {
+
+            color: #b89b38;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (min-width: 600px) {
+
+            .container {
+
+                padding:
+                    25px
+                    20px
+                    45px;
+            }
+
+
+            header {
+
+                padding:
+                    30px
+                    15px;
+            }
+
+
+            .logo-area {
+
+                width: 115px;
+
+                height: 115px;
+            }
+
+
+            .lodge-name {
+
+                font-size: 19px;
+            }
+
+
+            .lodge-orient {
+
+                font-size: 13px;
+            }
+
+
+            .event-title {
+
+                font-size: 37px;
+            }
+
+
+            .degree {
+
+                font-size: 17px;
+            }
+
+
+            .event-card {
+
+                padding:
+                    28px
+                    25px;
+            }
+
+
+            .event-info {
+
+                flex-direction: row;
+            }
+
+
+            .info-item {
+
+                flex: 1;
+
+                border-bottom: none;
+
+                border-right:
+                    1px solid
+                    rgba(212, 175, 55, 0.2);
+            }
+
+
+            .info-item:last-child {
+
+                border-right: none;
+            }
+
+
+            .registration-card {
+
+                padding:
+                    35px
+                    30px;
+            }
+
+
+            .registration-button {
+
+                width: auto;
+
+                min-width: 330px;
+
+                margin:
+                    0 auto;
+            }
+
+        }
+
+
+        /* =====================================================
+           DESKTOP
+        ===================================================== */
+
+        @media (min-width: 900px) {
+
+            .container {
+
+                padding:
+                    35px
+                    25px
+                    55px;
+            }
+
+
+            header {
+
+                padding:
+                    35px
+                    20px;
+            }
+
+
+            .logo-area {
+
+                width: 125px;
+
+                height: 125px;
+
+                margin-bottom: 24px;
+            }
+
+
+            .logo-placeholder {
+
+                font-size: 12px;
+            }
+
+
+            .lodge-name {
+
+                font-size: 21px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .lodge-orient {
+
+                font-size: 14px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .event-title {
+
+                font-size: 48px;
+
+                letter-spacing: 4px;
+            }
+
+
+            .degree {
+
+                font-size: 18px;
+
+                letter-spacing: 5px;
+            }
+
+
+            .ornament {
+
+                font-size: 24px;
+
+                letter-spacing: 8px;
+            }
+
+
+            .event-card {
+
+                margin:
+                    35px auto;
+
+                padding: 30px;
+            }
+
+
+            .section-title {
+
+                font-size: 23px;
+            }
+
+
+            .info-value {
+
+                font-size: 17px;
+            }
+
+
+            .registration-card {
+
+                padding:
+                    40px
+                    50px;
+            }
+
+
+            .registration-title {
+
+                font-size: 26px;
+            }
+
+
+            .registration-text {
+
+                font-size: 14px;
+            }
+
+
+            .registration-button:hover {
+
+                transform:
+                    translateY(-2px);
+
+                box-shadow:
+                    0 9px 28px
+                    rgba(212, 175, 55, 0.35);
+            }
+
+
+            .privacy-note {
+
+                padding:
+                    20px
+                    22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =================================================
+         CABEÇALHO
+    ================================================== -->
+
+    <header>
+
+
+        <!--
+            BRASÃO
+
+            Este espaço está preparado para receber
+            posteriormente a imagem oficial.
+        -->
+
+        <div class="logo-area">
+
+            <div class="logo-placeholder">
+
+                ESPAÇO<br>
+                PARA O<br>
+                BRASÃO
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOJA -->
+
+        <div class="lodge-name">
+
+            Loja Portal da Mantiqueira
+
+        </div>
+
+
+        <div class="lodge-orient">
+
+            Oriente de Barbacena - MG
+
+        </div>
+
+
+
+        <!-- EVENTO -->
+
+        <h1 class="event-title">
+
+            Reunião Noturna Campal
+
+        </h1>
+
+
+        <!-- GRAU -->
+
+        <div class="degree">
+
+            Grau I
+
+        </div>
+
+
+        <div class="ornament">
+
+            ✦ ✦ ✦
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         INFORMAÇÕES DO EVENTO
+    ================================================== -->
+
+    <section class="event-card">
+
+
+        <h2 class="section-title">
+
+            Informações do Evento
+
+        </h2>
+
+
+        <div class="event-info">
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Data
+
+                </span>
+
+
+                <span class="info-value">
+
+                    02 de outubro de 2026
+
+                </span>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Horário
+
+                </span>
+
+
+                <span class="info-value">
+
+                    19h30
+
+                </span>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Local
+
+                </span>
+
+
+                <span class="info-value">
+
+                    Parque Hotel Mantiqueira
+
+                    <br>
+
+                    BR-040, Km 708 — sentido BH/Rio
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         INSCRIÇÃO
+    ================================================== -->
+
+    <section class="registration-card">
+
+
+        <h2 class="registration-title">
+
+            Confirme sua participação
+
+        </h2>
+
+
+        <p class="registration-text">
+
+            Para confirmar sua presença na
+            Reunião Noturna Campal,
+            clique no botão abaixo e preencha
+            o formulário de inscrição.
+
+        </p>
+
+
+        <!--
+            =================================================
+            LINK DO GOOGLE FORMS
+
+            Link fornecido pelo usuário:
+            https://forms.gle/2SQPeh3or9odEqGs8
+
+            target="_blank":
+            abre o formulário em uma nova aba.
+        =================================================
+        -->
+
+        <a
+
+            class="registration-button"
+
+            href="https://forms.gle/2SQPeh3or9odEqGs8"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+        >
+
+            ✦ FAZER MINHA INSCRIÇÃO ✦
+
+        </a>
+
+
+        <span class="button-subtitle">
+
+            O formulário de inscrição será aberto em uma nova aba.
+
+        </span>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         PRIVACIDADE
+    ================================================== -->
+
+    <section class="privacy-note">
+
+
+        <div class="privacy-note-title">
+
+            🔐 Privacidade e tratamento dos dados
+
+        </div>
+
+
+        <p>
+
+            Os dados fornecidos no formulário de inscrição,
+            incluindo informações pessoais como CPF,
+            telefone e e-mail, serão utilizados para
+            finalidades relacionadas à inscrição,
+            organização, identificação e comunicação
+            referentes à Reunião Noturna Campal,
+            observando a legislação aplicável,
+            especialmente a Lei nº 13.709/2018
+            (Lei Geral de Proteção de Dados — LGPD).
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RODAPÉ
+    ================================================== -->
+
+    <footer>
+
+
+        <p>
+
+            <strong>
+                Loja Portal da Mantiqueira
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Oriente de Barbacena - MG
+
+        </p>
+
+
+        <p>
+
+            Reunião Noturna Campal • Grau I
+
+        </p>
+
+
+        <p>
+
+            02 de outubro de 2026 • 19h30
+
+        </p>
+
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+```
